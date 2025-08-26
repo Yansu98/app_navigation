@@ -7,16 +7,41 @@ class Pagina02 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Estás en la página 02"),
+        title: const Text("Página 02"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Text(
-              "hola !",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            const Text(
+              "FIREBASE",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
               ),
+            ),
+            const Text(
+              "Firebase es una plataforma que ...",
+              style: TextStyle(fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+            const SizedBox(height: 15),
+            ElevatedButton(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                    "Regresar a la página anterior",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Icon(Icons.arrow_forward_ios),
+                ],
+              ),
+              onPressed: () {
+                // Acá se puede incluir código para cualquier proceso como acceso de datos
+                Navigator.pop(context);
+              },
+            ),
           ],
         ),
       ),
